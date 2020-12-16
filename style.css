@@ -1,0 +1,63 @@
+@font-face {
+  src: url("../LiveCode_8w_jscss/TTCommons-ThinItalic.ttf");
+  font-family: "TT Commons ThinItalic";
+
+  src: url("../LiveCode_8w_jscss/TTCommons-MediumItalic.ttf");
+  font-family: "TT Commons MediumItalic";
+
+  src: url("../LiveCode_8w_jscss/TTCommons-ExtraBoldItalic.ttf");
+  font-family: "TT Commons ExtraBoldItalic";
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eeeae7;
+  color:#484f5b;
+}
+
+h1 {
+  Font-family: "TT Commons ExtraBoldItalic";
+  font-weight: 900;
+  font-size: 156p;
+  color: rgb(30, 145, 49);
+}
+
+p {
+  Font-family: "TT Commons ExtraThinItalic";
+  font-weight: 100;
+  font-size: 120p;
+}
+
+
+h1,
+p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+}
+
+
+#root.clicked p {
+animation: 5s Rotate infinite alternate;
+}
+
+#root.clicked h1 {
+ animation: 5s Rotate infinite alternate-reverse;
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+      }
+  50% {
+    transform: rotate (180deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
